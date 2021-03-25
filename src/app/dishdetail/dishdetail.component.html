@@ -3,19 +3,19 @@
   fxLayoutGap="10px">
 
 
-  <div fxFlex>
+  <div fxFlex="40">
     <mat-grid-list cols="2" rowHeight="800px">
       <mat-grid-tile>
-        <div fxFlex *ngIf="selectedDish">
+        <div fxFlex *ngIf="dish">
           <mat-card>
             <mat-card-header>
               <mat-card-title>
-                <h3>{{selectedDish.name | uppercase}}</h3>
+                <h3>{{dish.name | uppercase}}</h3>
               </mat-card-title>
             </mat-card-header>
-            <img mat-card-image src={{selectedDish.image}} alt={{selectedDish.name}}>
+            <img HEIGHT="500em"  mat-card-image src={{dish.image}} alt={{dish.name}}>
             <mat-card-content>
-              <p>{{selectedDish.description}}
+              <p>{{dish.description}}
               </p>
             </mat-card-content>
             <mat-card-actions>
@@ -28,42 +28,14 @@
       
      
     <mat-grid-tile>
-      <!--
-      <ul style="list-style-type:none;">
-        <li>
-          <p>{{comments[0].comm}}</p>
-          <p>{{comments[0].puntuation}}</p>
-          <p>--{{comments[0].author}} {{comments[0].date}} </p>
-        </li>
-        
-        <li>
-          <p>{{comments[1].comm}}</p>
-          <p>{{comments[1].puntuation}}</p>
-          <p>--{{comments[1].author}} {{comments[0].date}} </p>
-        </li>
-
-        <li>
-          <p>{{comments[2].comm}}</p>
-          <p>{{comments[2].puntuation}}</p>
-          <p>--{{comments[2].author}} {{comments[0].date}} </p>
-        </li>
-
-        <li>
-          <p>{{comments[3].comm}}</p>
-          <p>{{comments[3].puntuation}}</p>
-          <p>--{{comments[3].author}} {{comments[0].date}} </p>
-        </li>
-      </ul>
-       -->
-      <mat-nav-list>
+      <mat-list>
         <h1>Comments</h1>
-        <mat-list-item *ngFor="let comm of comments">
-          <p>{{comm.comm}}</p>
-          <p>{{comm.puntuation}}</p>
-          <p>--{{comm.author}} </p>
-          <p>{{comm.date}}</p>
+        <mat-list-item *ngFor="let comm of dish.comments">
+          <p matLine>{{comm.comm}}</p>
+          <p matLine>{{comm.puntuation}}</p>
+          <p matLine>--{{comm.author}} {{comm.date}}</p>
         </mat-list-item>
-      </mat-nav-list>
+      </mat-list>
      
     </mat-grid-tile>
     </mat-grid-list>
