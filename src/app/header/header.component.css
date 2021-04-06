@@ -1,0 +1,13 @@
+
+
+body{
+    margin: 0px auto;
+    padding: 10px, 10px;
+}
+
+.jumbotron {
+    margin: 0px auto;
+    background: #9575CD;
+    color:floralwhite;
+    min-height: 150px;
+}
