@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+<<<<<<< HEAD
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { PromotionService } from './services/promotion.service';
@@ -35,6 +36,9 @@ import { MatInputModule} from '@angular/material/input';
 import { MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
+=======
+import { AppRoutingModule } from './app-routing/app-routing.component';
+>>>>>>> 86460deabaa0e60e5489a6e4c12c3a238de0ee75
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { ReactiveFormsModule} from '@angular/forms';
     AboutComponent,
     HomeComponent,
     ContactComponent,
+<<<<<<< HEAD
     LoginComponent
+=======
+    AppRoutingModule
+>>>>>>> 86460deabaa0e60e5489a6e4c12c3a238de0ee75
   ],
   imports: [
     BrowserModule,
@@ -69,6 +77,7 @@ import { ReactiveFormsModule} from '@angular/forms';
     MatSlideToggleModule
 
   ],
+<<<<<<< HEAD
   providers: [
     DishService, 
     PromotionService
@@ -77,6 +86,9 @@ import { ReactiveFormsModule} from '@angular/forms';
     LoginComponent
   ],
 
+=======
+  providers: [DishService],
+>>>>>>> 86460deabaa0e60e5489a6e4c12c3a238de0ee75
   bootstrap: [AppComponent]
 })
 export class AppModule { }
